@@ -1,0 +1,97 @@
+pluginManagement {
+    includeBuild("build-logic")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+
+        // Or use a single nexus repository
+        // maven {
+        //     url "https://nexus.myrepo.ru/repository/"
+        // }
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
+    repositories {
+        google()
+        mavenCentral()
+
+        // Or use a single nexus repository
+        // maven {
+        //     url "https://nexus.myrepo.ru/repository/"
+        // }
+    }
+}
+
+enableFeaturePreview "STABLE_CONFIGURATION_CACHE"
+
+boolean isCiServer = System.getenv().containsKey("CI")
+
+buildCache {
+    remote(HttpBuildCache) {
+        // Activate if you have a remote cache implemented
+        enabled = false
+
+        // Add your URL
+        url = 'https://example.com/cache/'
+
+        setPush(isCiServer)
+
+        credentials {
+            username = System.getenv("REMOTE_CACHE_USERNAME")
+            password = System.getenv("REMOTE_CACHE_PASSWORD")
+        }
+    }
+}
+
+rootProject.name = "idiomic-android-gradle"
+// Configuration
+include 'app'
+include 'sample-app'
+// Base
+include ':product:main:main'
+include ':product:main:main-api'
+include ':product:dashboard:dashboard'
+include ':product:dashboard:dashboard-api'
+// Core
+include ':product:core:androidservice'
+include ':product:core:androidutils'
+include ':product:core:component-ui'
+include ':product:core:coroutinesutils'
+include ':product:core:database'
+include ':product:core:featuretoggle'
+include ':product:core:image'
+include ':product:core:localstorage'
+include ':product:core:logger'
+include ':product:core:map'
+include ':product:core:navigation'
+include ':product:core:network'
+include ':product:core:usecase'
+include ':product:core:webview'
+// Services
+include ':product:services:analytics'
+include ':product:services:analytics-api'
+include ':product:services:crashlytics'
+include ':product:services:crashlytics-api'
+include ':product:services:push'
+include ':product:services:push-api'
+include ':product:services:remoteconfig'
+include ':product:services:remoteconfig-api'
+// Design system
+include ':product:designsystem:emptystate'
+include ':product:designsystem:theme'
+// Features
+include ':product:feature-1:feature-1'
+include ':product:feature-1:feature-1-api'
+include ':product:feature-2:feature-2'
+include ':product:feature-2:feature-2-api'
+include ':product:feature-3:feature-3'
+include ':product:feature-3:feature-3-api'
+include ':product:feature-4:feature-4'
+include ':product:feature-4:feature-4-api'
+include ':product:feature-5:feature-5'
+include ':product:feature-5:feature-5-api'

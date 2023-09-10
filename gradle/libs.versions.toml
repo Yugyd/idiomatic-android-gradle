@@ -1,0 +1,72 @@
+[versions]
+androidGradlePlugin = '8.1.1'
+kotlinVersion = '1.8.22'
+lifecycleVersion = '2.6.1'
+coreVersion = '1.10.0'
+appcompat = '1.6.1'
+material = '1.9.0'
+composeVersion = '2023.04.01'
+# https://developer.android.com/jetpack/androidx/releases/compose-kotlin#pre-release_kotlin_compatibility
+kotlinCompilerExtensionVersion = '1.4.5'
+versionsUpdates = '0.47.0'
+hiltVersion = '2.44'
+kspVersion = '1.8.22-1.0.11'
+navigationVersion = '2.7.0'
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+android-test = { id = "com.android.test", version.ref = "androidGradlePlugin" }
+# Kotlin
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinVersion" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinVersion" }
+# Other
+android-cache-fix = { id = "org.gradle.android.cache-fix", version = "2.7.1" }
+update-versions = { id = "com.github.ben-manes.versions", version.ref = "versionsUpdates" }
+# DI
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
+hilt-plugin = { id = "dagger.hilt.android.plugin", version.ref = "hiltVersion" }
+# ksp
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+
+[libraries]
+# Gradle
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlinVersion" }
+update-versions-gradle-plugin = { group = "com.github.ben-manes", name = "gradle-versions-plugin", version.ref = 'versionsUpdates' }
+hilt-gradle-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = 'hiltVersion' }
+# Kotlin
+kotlin-stdlib-core = { module = 'org.jetbrains.kotlin:kotlin-stdlib', version.ref = 'kotlinVersion' }
+kotlinx-serialization = { module = 'org.jetbrains.kotlinx:kotlinx-serialization-json', version = '1.5.0' }
+# AndroidX
+androidx-annotation = { module = 'androidx.annotation:annotation', version = '1.5.0' }
+core-ktx = { module = 'androidx.core:core-ktx', version.ref = 'coreVersion' }
+appcompat = { module = 'androidx.appcompat:appcompat', version.ref = 'appcompat' }
+constraint-layout = { module = 'androidx.constraintlayout:constraintlayout', version = '2.1.4' }
+lifecycle-viewmodel-ktx = { module = 'androidx.lifecycle:lifecycle-viewmodel-ktx', version.ref = 'lifecycleVersion' }
+lifecycle-runtime-ktx = { module = 'androidx.lifecycle:lifecycle-runtime-ktx', version.ref = 'lifecycleVersion' }
+lifecycle-process = { module = 'androidx.lifecycle:lifecycle-process', version.ref = 'lifecycleVersion' }
+lifecycle-livedata-ktx = { module = 'androidx.lifecycle:lifecycle-livedata-ktx', version.ref = 'lifecycleVersion' }
+splashscreen = { module = 'androidx.core:core-splashscreen', version = '1.0.0' }
+# Compose
+compose-bom = { module = 'androidx.compose:compose-bom', version.ref = 'composeVersion' }
+# Material Design 3
+compose-material3 = { module = 'androidx.compose.material3:material3', version = '1.1.1' }
+# Android Studio Preview support
+compose-ui-tooling-preview = { module = 'androidx.compose.ui:ui-tooling-preview' }
+compose-ui-tooling = { module = 'androidx.compose.ui:ui-tooling' }
+# Optional - Resources
+compose-material-icons = { module = 'androidx.compose.material:material-icons-extended' }
+# UI Foundation
+compose-ui-graphics = { module = 'androidx.compose.ui:ui-graphics' }
+# Optional - Integration with activities and ViewModels
+compose-activity = { module = 'androidx.activity:activity-compose', version = '1.6.1' }
+compose-viewmodel = { module = 'androidx.lifecycle:lifecycle-viewmodel-compose', version = '2.5.1' }
+compose-lifecycle = { module = 'androidx.lifecycle:lifecycle-runtime-compose', version = '2.6.0-beta01' }
+# Material
+material = { module = 'com.google.android.material:material', version.ref = 'material' }
+# Navigation
+navigation-fragment-ktx = { module = 'androidx.navigation:navigation-fragment-ktx', version.ref = 'navigationVersion' }
+navigation-ui-ktx = { module = 'androidx.navigation:navigation-ui-ktx', version.ref = 'navigationVersion' }
+# Timber
+timber = { module = 'com.jakewharton.timber:timber', version = '5.0.1' }
