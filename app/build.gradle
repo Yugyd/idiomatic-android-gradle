@@ -26,6 +26,7 @@ dependencies {
     // Lifecycle
     implementation libs.lifecycle.livedata.ktx
     implementation libs.lifecycle.viewmodel.ktx
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
 
     // Navigation
     implementation libs.navigation.fragment.ktx

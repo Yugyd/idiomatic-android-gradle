@@ -1,12 +1,12 @@
 package com.yugyd.idiomatic.android.gradle
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.yugyd.idiomatic.android.gradle.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +26,11 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_sample1,
+                R.id.navigation_sample2,
+                R.id.navigation_sample3,
+                R.id.navigation_sample4,
+                R.id.navigation_sample5,
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

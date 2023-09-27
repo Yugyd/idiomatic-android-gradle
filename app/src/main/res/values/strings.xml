@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">Idiomatic Android Gradle</string>
+    <string name="sample1_title">Sample1</string>
+    <string name="sample2_title">Sample2</string>
+    <string name="sample3_title">Sample3</string>
+    <string name="sample4_title">Sample4</string>
+    <string name="sample5_title">Sample5</string>
 </resources>
