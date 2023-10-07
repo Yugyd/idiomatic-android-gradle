@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sample_13_navigation"
+    app:startDestination="@+id/navigation_sample13">
+
+    <fragment
+        android:id="@+id/navigation_sample13"
+        android:name="com.yugyd.idiomatic.android.gradle.ui.sample13.Sample13Fragment"
+        android:label="@string/sample13_title"
+        tools:layout="@layout/fragment_sample13" />
+
+</navigation>
