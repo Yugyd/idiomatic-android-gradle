@@ -1,5 +1,5 @@
 [versions]
-androidGradlePlugin = '8.1.1'
+androidGradlePlugin = '8.1.4'
 kotlinVersion = '1.8.22'
 lifecycleVersion = '2.6.1'
 coreVersion = '1.10.0'
@@ -21,7 +21,7 @@ android-test = { id = "com.android.test", version.ref = "androidGradlePlugin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinVersion" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinVersion" }
 # Other
-android-cache-fix = { id = "org.gradle.android.cache-fix", version = "2.7.1" }
+android-cache-fix = { id = "org.gradle.android.cache-fix", version = "3.0.1" }
 update-versions = { id = "com.github.ben-manes.versions", version.ref = "versionsUpdates" }
 # DI
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
