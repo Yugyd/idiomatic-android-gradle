@@ -2,10 +2,29 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.jvm) apply false
     alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.ksp) apply false
     alias(libs.plugins.android.cache.fix) apply false
     alias(libs.plugins.update.versions) apply false
-    alias(libs.plugins.hilt) apply false
-    id "quiz.dependency.updates"
+    alias(libs.plugins.hilt.plugin) apply false
+    alias(libs.plugins.convention.application) apply false
+    alias(libs.plugins.convention.application.buildtype) apply false
+    alias(libs.plugins.convention.application.compose) apply false
+    alias(libs.plugins.convention.application.jacoco) apply false
+    alias(libs.plugins.convention.application.lint) apply false
+    alias(libs.plugins.convention.application.test) apply false
+    alias(libs.plugins.convention.buildtype.apk.version) apply false
+    alias(libs.plugins.convention.library) apply false
+    alias(libs.plugins.convention.library.buildtype) apply false
+    alias(libs.plugins.convention.library.compose) apply false
+    alias(libs.plugins.convention.library.jacoco) apply false
+    alias(libs.plugins.convention.library.lint) apply false
+    alias(libs.plugins.convention.library.publish) apply false
+    alias(libs.plugins.convention.library.test) apply false
+    alias(libs.plugins.convention.kotlin.jvm) apply false
+    alias(libs.plugins.convention.kotlin.jvm.publish) apply false
+    alias(libs.plugins.convention.platform.publish) apply false
+    alias(libs.plugins.convention.hilt) apply false
+    alias(libs.plugins.convention.dependency.updates)
 }
 
 tasks.register('clean', Delete) {

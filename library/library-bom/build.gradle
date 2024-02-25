@@ -1,0 +1,10 @@
+plugins {
+    alias(libs.plugins.convention.platform.publish)
+}
+
+dependencies {
+    constraints {
+        it.api(project(":library:library-android"))
+        it.api(project(":library:library-jvm"))
+    }
+}

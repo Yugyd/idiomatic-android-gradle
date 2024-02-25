@@ -1,6 +1,11 @@
 plugins {
-    id 'quiz.android.application'
-    id 'quiz.android.buildtype.apk.version'
+    alias(libs.plugins.convention.application)
+    alias(libs.plugins.convention.application.buildtype)
+    alias(libs.plugins.convention.application.compose)
+    alias(libs.plugins.convention.application.jacoco)
+    alias(libs.plugins.convention.application.lint)
+    alias(libs.plugins.convention.application.test)
+    alias(libs.plugins.convention.buildtype.apk.version)
 }
 
 android {
@@ -8,15 +13,15 @@ android {
 
     defaultConfig {
         applicationId "com.yugyd.idiomatic.android.gradle"
-
-        versionCode 1
-        versionName "1.0"
     }
 
     buildFeatures.viewBinding true
 }
 
 dependencies {
+    implementation(project(":library:library-android"))
+    implementation(project(":library:library-jvm"))
+
     // UI
     implementation libs.appcompat
     implementation libs.core.ktx
@@ -26,7 +31,6 @@ dependencies {
     // Lifecycle
     implementation libs.lifecycle.livedata.ktx
     implementation libs.lifecycle.viewmodel.ktx
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
 
     // Navigation
     implementation libs.navigation.fragment.ktx

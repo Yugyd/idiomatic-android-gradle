@@ -27,8 +27,6 @@ dependencyResolutionManagement {
     }
 }
 
-enableFeaturePreview "STABLE_CONFIGURATION_CACHE"
-
 boolean isCiServer = System.getenv().containsKey("CI")
 
 buildCache {
@@ -87,11 +85,7 @@ include ':product:designsystem:theme'
 // Features
 include ':product:feature-1:feature-1'
 include ':product:feature-1:feature-1-api'
-include ':product:feature-2:feature-2'
-include ':product:feature-2:feature-2-api'
-include ':product:feature-3:feature-3'
-include ':product:feature-3:feature-3-api'
-include ':product:feature-4:feature-4'
-include ':product:feature-4:feature-4-api'
-include ':product:feature-5:feature-5'
-include ':product:feature-5:feature-5-api'
+// Library artefacts (sample build logic)
+include ':library:library-android'
+include ':library:library-bom'
+include ':library:library-jvm'
