@@ -6,21 +6,46 @@ for starting a project from scratch or testing and reviewing certain approaches.
 
 # Build logic
 
+## Introductory requirements
+
+- Gradle: 8.6
+- Android Gradle Plugin: 8.1.4
+- Kotlin: 1.9.22
+- Compile SDK: 34
+- Target SDK: 34
+- Min SDK: 24
+
 ## For profiling use build-scan and gradle-profiler
 
 The main scripts for gradle-profiler can be found in the directory [/build-logic/performance/].
 
 [Learn more](https://docs.gradle.org/current/userguide/performance.html#inspect_your_build)
 
+[Android documentation](https://developer.android.com/build/profile-your-build)
+
+### Install instruction
+
+[Learn more](https://github.com/gradle/gradle-profiler?tab=readme-ov-file#homebrew)
+
+### Performance scenarios
+
+[See performance directory](build-logic/performance)
+
+- clean-build.scenarios - Cold assembly
+  measurements. https://developer.android.com/build/profile-your-build#profiling_a_clean_build
+- configuration.scenarios - Measurements of configuration time.
+- incremental-build.scenarios - Profiling an incremental
+  build. https://developer.android.com/build/profile-your-build#profiling_an_incremental_build
+- jvm-args.scenarios - Profiling different memory/CPU
+  settings. https://developer.android.com/build/profile-your-build#profiling_different_memorycpu_settings
+- plugin-version.scenarios - Profiling different Gradle and Android Gradle plugin
+  versions. https://developer.android.com/build/profile-your-build#profiling_different_gradle_plugin_versions
+
 ## Keep Android Studio and SDK tools up to date
 
 [Learn more](https://developer.android.com/build/optimize-your-build#update)
 
 ## Keep Gradle, Android Gradle Plugin and Kotlin up to date
-
-- Gradle: 8.3
-- Android Gradle Plugin: 8.1.1
-- Kotlin: 1.8.22
 
 [Learn more](https://developer.android.com/build/optimize-your-build#update)
 
